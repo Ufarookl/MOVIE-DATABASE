@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: MOVIE-DATABASE
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/db_movies
+    username: root
+    password: Password@123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
