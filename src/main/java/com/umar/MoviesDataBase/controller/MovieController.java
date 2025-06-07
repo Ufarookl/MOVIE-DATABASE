@@ -67,7 +67,7 @@ public class MovieController {
         movieService.deleteMovie(id);
         return ResponseEntity.ok("Deleted movie with ID: " + id);
     }
-
+    //PAginated api
     @GetMapping("/paginated")
     public ResponseEntity<Page<MovieDTO>> getPaginated(@RequestParam(defaultValue = "0") int page,
                                                        @RequestParam(defaultValue = "5") int size,
