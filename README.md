@@ -108,6 +108,12 @@ mvn spring-boot:run
 
 `GET /api/movies/language/{language}`
 
+### ⚖️  Get Movies by Language and Genre
+
+`GET /api/movies/search?genre=Sci-Fi&language=English`
+
+###### Uses native SQL query to filter based on both parameters.
+
 ### 📑 Paginated Movies
 
 `GET /api/movies/paginated?page=0&size=5&sortBy=title`

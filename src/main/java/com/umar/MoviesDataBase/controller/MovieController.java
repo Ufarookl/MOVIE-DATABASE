@@ -56,6 +56,11 @@ public class MovieController {
         return movieService.getMoviesByLanguage(language).stream().map(MovieMapper::toDto).collect(Collectors.toList());
     }
 
+    @GetMapping("search")
+    public List<MovieDTO> search(@RequestParam String genre, @RequestParam String language) {
+        return movieService.getMoviesByGenreandLanguage(genre, language).stream().map(MovieMapper::toDto).collect(Collectors.toList());
+    }
+
     @PutMapping("/{id}")
     public ResponseEntity<MovieDTO> update(@PathVariable Long id, @RequestBody MovieDTO dto) {
         Movie updated = movieService.updateMovie(id, MovieMapper.toEntity(dto));

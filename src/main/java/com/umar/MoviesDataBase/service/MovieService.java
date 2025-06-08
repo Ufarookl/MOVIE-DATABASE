@@ -18,4 +18,5 @@ public interface MovieService {
     Movie updateMovie(Long id, Movie movie);
     void deleteMovie(Long id);
     Page<Movie> getMoviesPaginated(Pageable pageable);
+    List<Movie> getMoviesByGenreandLanguage(String genre, String language);
 }

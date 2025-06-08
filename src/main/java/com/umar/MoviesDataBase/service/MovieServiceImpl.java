@@ -71,4 +71,9 @@ public class MovieServiceImpl implements MovieService {
     public Page<Movie> getMoviesPaginated(Pageable pageable) {
         return movieRepository.findAll(pageable);
     }
+
+    @Override
+    public List<Movie> getMoviesByGenreandLanguage(String genre, String language) {
+        return movieRepository.findByGenreAndLanguage(genre, language);
+    }
 }
